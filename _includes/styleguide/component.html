@@ -70,25 +70,19 @@
         <div role="tabpanel"
              class="tab-pane active"
              id="{{ tab_name }}-demo">
-          <div class="s-styleguide-showcase__component">
-            <iframe src="{{ source }}" title="{{ title }}"></iframe>
-          </div>
+          <iframe src="{{ source }}" title="{{ title }}"></iframe>
         </div>
 
         <div role="tabpanel"
              class="tab-pane"
              id="{{ tab_name }}-liquid">
-          <div class="s-styleguide-showcase__component">
-            {% highlight liquid %}{{ liquid }}{% endhighlight %}
-          </div>
+          {% highlight liquid %}{{ liquid }}{% endhighlight %}
         </div>
 
         <div role="tabpanel"
              class="tab-pane"
              id="{{ tab_name }}-html">
-          <div class="s-styleguide-showcase__component">
-            {% highlight html %}{{ html }}{% endhighlight %}
-          </div>
+          {% highlight html %}{{ html }}{% endhighlight %}
         </div>
 
       </div>
