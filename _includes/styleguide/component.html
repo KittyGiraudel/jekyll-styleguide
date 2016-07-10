@@ -6,16 +6,13 @@
 {% assign html = component.content %}
 {% assign liquid = component.example %}
 {% assign parameters = component.parameters %}
-{% assign tab_name = slug | prepend: "c-" | append: "-" | append: "-tab" %}
+{% assign tab_name = slug | append: "-" | append: "-tab" %}
 
-<div class="s-styleguide-showcase"
-     id="c-{{ slug }}">
+<div class="s-styleguide-showcase" id="{{ slug }}">
 
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h2 class="panel-title">
-        {{ title }}
-      </h2>
+      <h2 class="panel-title">{{ title }}</h2>
     </div>
     
     <div class="panel-body">
@@ -41,53 +38,39 @@
       </table>
 
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs"
-          role="tablist">
-        <li role="presentation"
-            class="active">
-          <a href="#{{ tab_name }}-demo"
-             aria-controls="{{ tab_name }}-demo"
-             role="tab"
-             data-toggle="tab">Demo</a>
+      <ul class="nav nav-tabs" role="tablist">
+
+        <li role="presentation" class="active">
+          <a href="#{{ tab_name }}-demo" aria-controls="{{ tab_name }}-demo" role="tab" data-toggle="tab">Demo</a>
         </li>
+
         <li role="presentation">
-          <a href="#{{ tab_name }}-liquid"
-             aria-controls="{{ tab_name }}-liquid"
-             role="tab"
-             data-toggle="tab">Liquid</a>
+          <a href="#{{ tab_name }}-liquid" aria-controls="{{ tab_name }}-liquid" role="tab" data-toggle="tab">Liquid</a>
         </li>
+
         <li role="presentation">
-          <a href="#{{ tab_name }}-html"
-             aria-controls="{{ tab_name }}-html"
-             role="tab"
-             data-toggle="tab">HTML</a>
+          <a href="#{{ tab_name }}-html" aria-controls="{{ tab_name }}-html" role="tab" data-toggle="tab">HTML</a>
         </li>
+
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
 
-        <div role="tabpanel"
-             class="tab-pane active"
-             id="{{ tab_name }}-demo">
+        <div role="tabpanel" class="tab-pane active" id="{{ tab_name }}-demo">
           <iframe src="{{ source }}" title="{{ title }}"></iframe>
         </div>
 
-        <div role="tabpanel"
-             class="tab-pane"
-             id="{{ tab_name }}-liquid">
+        <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-liquid">
           {% highlight liquid %}{{ liquid }}{% endhighlight %}
         </div>
 
-        <div role="tabpanel"
-             class="tab-pane"
-             id="{{ tab_name }}-html">
+        <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-html">
           {% highlight html %}{{ html }}{% endhighlight %}
         </div>
 
       </div>
 
     </div>
-
   </div>
 </div>
