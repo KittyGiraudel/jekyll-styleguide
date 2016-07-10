@@ -1,0 +1,7 @@
+{% assign class = "c-logo " | append: include.class %}
+{% assign image_path = "http://jekyllrb.com/img/logo-2x.png" %}
+{% assign alt = include.alt | default: site.title %}
+
+<a class="{{ class }}" href="/">
+  <img src="{{ image_path }}" alt="{{ alt }}" />
+</a>
