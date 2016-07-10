@@ -1,5 +1,5 @@
 {% assign title = page.title | default: site.title | escape %}
-{% assign description = page.excerpt | default: page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+{% assign description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
 {% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
 <head>
   <meta charset="utf-8">
