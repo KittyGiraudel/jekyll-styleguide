@@ -1,0 +1,25 @@
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Iframes resizing -->
+<script type='text/javascript'>
+  (function () {
+    var iframes = document.querySelectorAll('iframe');
+    Array.prototype.forEach.call(iframes, resizeIframe);
+
+    function resizeIframe (iframe) {
+      iframe.onload = function () {
+        iframe.style.height = iframe.contentWindow.document.body.offsetHeight + 'px';
+      }
+    }
+  }());
+</script>
+
+<!-- Affix sidebar initialisation -->
+<script>
+  var $nav = $('.c-styleguide-aside')
+  $nav.affix({ offset: { top: $nav.offset().top } })
+</script>

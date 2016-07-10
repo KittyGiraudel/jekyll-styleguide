@@ -1,0 +1,9 @@
+<div class="scrollspy">
+  <div class="s-styleguide-aside hidden-xs hidden-sm">
+    <ul class="nav">
+      {% for component in site.styleguide %}
+        <li><a href="#c-{{ component.slug }}">{{ component.slug | replace: "-", " " | capitalize }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

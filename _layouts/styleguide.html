@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body data-spy="scroll" data-target=".scrollspy">
+    <main class="main" aria-label="Content">
+      {{ content }}
+    </main>
+
+    {% include styleguide/scripts.html %}
+  </body>
+
+</html>

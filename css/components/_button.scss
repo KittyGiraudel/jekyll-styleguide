@@ -1,0 +1,15 @@
+.c-button {
+  background-color: transparent;
+  border: 1px solid rgb(0, 175, 230);
+  cursor: pointer;
+  font: inherit;
+  min-width: 150px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.c-button:hover,
+.c-button:active {
+  background-color: rgb(0, 175, 230);
+  color: rgb(223, 231, 238);
+}

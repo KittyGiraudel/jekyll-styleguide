@@ -1,0 +1,8 @@
+{% assign class = "c-button " | append: include.class %}
+{% assign type = include.type | default: "button" %}
+{% assign content = include.content %}
+
+{% if content %}
+  <button class="{{ class }}"
+          type="{{ type }}">{{ content }}</button>
+{% endif %}

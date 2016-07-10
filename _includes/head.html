@@ -1,0 +1,23 @@
+{% assign title = page.title | default: site.title | escape %}
+{% assign description = page.excerpt | default: page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+{% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ url }}">
+
+  <!-- Stylesheets specific to the styleguide page -->
+  {% if page.url == "/styleguide/" %}
+    <link rel="stylesheet" href="{{ "/css/styleguide.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  {% endif %}
+
+  <!-- Stylesheet specific to the rendered iframe of a component -->
+  {% if page.collection == "styleguide" %} 
+    <link rel="stylesheet" href="{{ "/css/styleguide-entry.css" | prepend: site.baseurl }}">
+  {% endif %}
+</head>

@@ -1,0 +1,34 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Jekyll Styleguide
+description: >
+  This project is a demo of how we can create a living styleguide in Jekyll.
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+
+# Sass settings
+sass:
+  sass_dir: css
+
+# Styleguide settings
+collections:
+  styleguide:
+    output: true
+
+# Sensible defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "styleguide"
+    values:
+      layout: "default"
