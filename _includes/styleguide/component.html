@@ -37,40 +37,48 @@
         </tbody>
       </table>
 
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
+      <div class="s-styleguide-tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
 
-        <li role="presentation" class="active">
-          <a href="#{{ tab_name }}-demo" aria-controls="{{ tab_name }}-demo" role="tab" data-toggle="tab">Demo</a>
-        </li>
+          <li role="presentation" class="active">
+            <a href="#{{ tab_name }}-demo" aria-controls="{{ tab_name }}-demo" role="tab" data-toggle="tab">Demo</a>
+          </li>
 
-        <li role="presentation">
-          <a href="#{{ tab_name }}-liquid" aria-controls="{{ tab_name }}-liquid" role="tab" data-toggle="tab">Liquid</a>
-        </li>
+          <li role="presentation">
+            <a href="#{{ tab_name }}-liquid" aria-controls="{{ tab_name }}-liquid" role="tab" data-toggle="tab">Liquid</a>
+          </li>
 
-        <li role="presentation">
-          <a href="#{{ tab_name }}-html" aria-controls="{{ tab_name }}-html" role="tab" data-toggle="tab">HTML</a>
-        </li>
+          <li role="presentation">
+            <a href="#{{ tab_name }}-html" aria-controls="{{ tab_name }}-html" role="tab" data-toggle="tab">HTML</a>
+          </li>
 
-      </ul>
+        </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
+        <!-- Tab panes -->
+        <div class="tab-content">
 
-        <div role="tabpanel" class="tab-pane active" id="{{ tab_name }}-demo">
-          <iframe src="{{ source }}" title="{{ title }}"></iframe>
+          <div role="tabpanel" class="tab-pane active" id="{{ tab_name }}-demo">
+            <a class="c-styleguide-showcase__fullscreen"
+               href="{{ source }}"
+               title="Open in fullscreen"
+               target="_blank">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              <span class="sr-only">Open in fullscreen</span>
+            </a>
+            <iframe src="{{ source }}" title="{{ title }}"></iframe>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-liquid">
+            {% highlight liquid %}{{ liquid }}{% endhighlight %}
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-html">
+            {% highlight html %}{{ html }}{% endhighlight %}
+          </div>
+
         </div>
-
-        <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-liquid">
-          {% highlight liquid %}{{ liquid }}{% endhighlight %}
-        </div>
-
-        <div role="tabpanel" class="tab-pane" id="{{ tab_name }}-html">
-          {% highlight html %}{{ html }}{% endhighlight %}
-        </div>
-
       </div>
-
     </div>
   </div>
 </div>

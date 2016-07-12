@@ -59,6 +59,24 @@ iframe {
   margin-bottom: 50px; /* 1 */
 }
 
+/**
+ * 1. Positon context for fullscreen button.
+ */
+.s-styleguide-tabs {
+  position: relative; /* 1 */
+}
+
+/**
+ * Link to open preview in full screen.
+ */
+.c-styleguide-showcase__fullscreen {
+  border: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 1em;
+}
+
 .tab-pane {
   padding: 20px 0;
 }
